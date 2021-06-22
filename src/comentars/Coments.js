@@ -22,7 +22,10 @@ export default function Coments(){
                 comments.map(value =>  <Coment item={value}/>)
 
 
+
             }
+
+
 
         </div>
     )
