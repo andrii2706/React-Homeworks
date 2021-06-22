@@ -1,0 +1,9 @@
+.coment{
+    width: 300px;
+    height: auto;
+    border: 1px solid red;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
