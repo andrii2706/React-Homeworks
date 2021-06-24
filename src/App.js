@@ -1,18 +1,27 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.css'
 
-import Coments from './comentars/Coments';
-import User from "./users/User";
-import Users from "./users/Users";
+import {useEffect, useState} from "react";
+import {getPosts} from "./api/API";
+import Posts from "./posts-hm-2/Posts";
 
 
 function App() {
+    let[posts,setPosts ] = useState([])
+    useEffect(()=>{
+
+        getPosts().then(response =>{
+            setPosts(response.data)
+            console.log(response);
+        })
+
+
+    }, [])
   return (
    <div>
         
-       {/*<Coments/>*/}
-       {/*<User/>*/}
-       <Users/>
+
+       <Posts items={posts}/>
    </div>
   );
 }
