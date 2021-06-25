@@ -1,15 +1,21 @@
-export default function Post({item}){
+export default function Post2({item,selectPost}){
     return(
         <div className={'function'}>
             <h2 className={'header-2'}>{item.id}</h2>
-                <h3 className={'header-3'}>
+                <h3>
                     {item.title}
                 </h3>
-            <p className={'body'}>
+            <p>
                 {item.body}
             </p>
-            <button onClick={() =>{} }>
-            click here</button>
+            <button className={'btn'} onClick={() => {
+                selectPost(item.id, item.title,item.body);
+            }}>click pls</button>
+            {/*<button onClick={() =>{*/}
+            {/*//     selectPost()*/}
+            {/*//     selectPost()*/}
+            {/*} }>*/}
+            {/*click here</button>*/}
         </div>
     )
 }
