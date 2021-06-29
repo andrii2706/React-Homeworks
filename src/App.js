@@ -1,19 +1,34 @@
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route,Link,Switch} from "react-router-dom";
 import './App.css';
-
-import Coments from './comentars/Coments';
-import User from "./users/User";
-import Users from "./users/Users";
 
 
 function App() {
   return (
-   <div>
-        
-       {/*<Coments/>*/}
-       {/*<User/>*/}
-       <Users/>
-   </div>
+      <Router>
+          <div>
+              <div><Link to={"/"}>home page</Link></div>
+                <div><Link to = {"/users"}>user page</Link></div>
+                <div><Link to = {"/posts"}>posts page</Link></div>
+                <div><Link to = {"/comments"}>comments page</Link></div>
+
+          </div>
+
+          <Switch>
+            <Route exact path={"/"} render={() => <div>
+                Hello Okten
+            </div>}/>
+              <Route path={"/users"} />
+              <Route path={"/posts"} />
+              <Route path={"/comments"} />
+
+
+
+          </Switch>
+
+
+
+
+      </Router>
   );
 }
 
