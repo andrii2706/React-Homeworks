@@ -1,6 +1,6 @@
-export default function Post(){
+export default function Post({item}){
 return(
 <div>
-    {item}
+    {item.id} --- {item.body}
 </div>
 )}

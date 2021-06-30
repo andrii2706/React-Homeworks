@@ -1,15 +1,15 @@
 import {useEffect, useState} from "react";
-import {getUser} from "../api/API";
+import {getUsers} from "../api/API";
 import User from "./User";
 
 
 
-export default function Users(){
+export default function Users({props}){
 
     let[users, setUsers] = useState([]);
     useEffect(
         ()=>{
-            getUser().then(value => {
+            getUsers().then(value => {
                 setUsers(value.data)
             })
         },[])
