@@ -12,6 +12,7 @@ export default function Comments(props) {
        }))
    },[])
     // let filter = comments.filter(value => value.userId === id)
+
     return (
         <div>
             {

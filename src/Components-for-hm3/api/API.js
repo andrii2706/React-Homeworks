@@ -8,6 +8,6 @@ const getComment = (id) => postInstance('/comments' + id);
 const getPosts = () => postInstance('/posts');
 const getPost = (id) => postInstance('/posts' + id);
 const getUsers = () => postInstance('/users');
-const getUsersOf =(id) =>('/users'+ id +'/posts'+ id +'/comments' )
+const getUsersOf =(id) => postInstance('users/'+ id +'/posts');
 const getUser = (id) => postInstance('/users/' + id);
 export {getUser,getPost,getPosts,getComment,getComments,getUsers,getUsersOf}
