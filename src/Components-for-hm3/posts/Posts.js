@@ -13,7 +13,7 @@ export default function Posts(props){
                 setPosts(value.data)
             })
         },[])
-
+// let fillter = posts.filter(value => value.userId === id)
     return(
         <div>
             {

@@ -4,7 +4,7 @@ import User from "./User";
 
 
 
-export default function Users({props}){
+export default function Users(props){
 
     let[users, setUsers] = useState([]);
     useEffect(
@@ -13,6 +13,7 @@ export default function Users({props}){
                 setUsers(value.data)
             })
         },[])
+
 
 return(
 <div>
