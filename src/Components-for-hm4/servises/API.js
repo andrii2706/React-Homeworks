@@ -5,7 +5,7 @@ import  axios from 'axios'
 
 const getUsers = () => axiosInstance('users/');
 const getUser = (id) => axiosInstance('users/'+ id)
-const getUSerPost =(id) => axiosInstance('users/'+id+'/posts')
+// const getUSerPost =(id) => axiosInstance('users/'+id+'/posts')
 
 
 
