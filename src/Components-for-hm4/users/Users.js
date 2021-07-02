@@ -15,8 +15,8 @@ getUsers().then(value => setUsers([...value.data]))
         users.map(value => <User key={value.id} item={value}/>)
     }
 
-    <Switch>
+
         <Route path={'/users/:id'} component={UserDetails}/>
-    </Switch>
+
 </div>
 )}
