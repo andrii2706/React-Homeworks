@@ -1,5 +1,8 @@
 export default function Post({item}){
-return(
+
+    console.log(item);
+    
+    return(
 <div>
     {item.id} - {item.body}
 </div>
