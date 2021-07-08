@@ -3,7 +3,7 @@ import './App.css';
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import {store} from "./redux";
-import {addTodos, pushTodo, serLoadingTrue, setLoadingFalse} from "./redux/createActions/acrionCreators";
+import {addTodos, del_Todo, pushTodo, serLoadingTrue, setLoadingFalse} from "./redux/createActions/acrionCreators";
 import {Fragment} from "react";
 
 // const CreateTodoForm = ({onSubmit}) => {
@@ -132,6 +132,7 @@ const CreateTodoForm = ({ onSubmit }) => {
         }
     }
 
+
     return (
         <form onSubmit={handleSubmit}>
             <input type="text" value={title} onChange={({target: {value}}) => setTitle(value)} placeholder="todo title" />
@@ -140,12 +141,12 @@ const CreateTodoForm = ({ onSubmit }) => {
             <input type="text" value={description} onChange={({target: {value}}) => setDescription(value)} placeholder="todo description" />
             <br/>
             <br/>
-            <button type="submit" disabled={!title || !description || isLoading}>create todo</button>
+            <button type="submit" disabled={!title || !description || isLoading}>create to do</button>
         </form>
     )
 }
 
-const Todos = ({todos, isLoading}) => {
+const Todos = ({todos, isLoading, deleteTodo}) => {
     if(isLoading) return <h1>LOADING...</h1>
 
     return (
@@ -156,6 +157,7 @@ const Todos = ({todos, isLoading}) => {
                     <div>{todo.description}</div>
                     <div>Created At: {new Date(todo.createdAt).toDateString()}</div>
                     <div>Status {todo.completed.toString()}</div>
+                    <button type="deleted" onClick={() => deleteTodo(todo.id)}>asd</button>
                     <hr/>
                 </Fragment>
             ))}
@@ -201,12 +203,23 @@ function App() {
 
         dispatch(pushTodo(data))
     }
+    const deleteTodo = async (id) => {
+        console.log(id);
+        await fetch('http://localhost:8888/delete-todo/' + id, {
+            method: 'DELETE',
+        })
+
+        // const data = await del.json();
+
+        dispatch(del_Todo(id))
+
+    }
 
     return (
         <div className="App">
             <div className="App-header">
                 <CreateTodoForm onSubmit={onTodoCreate}/>
-                <Todos todos={todos} isLoading={todosLoading}/></div>
+                <Todos todos={todos} isLoading={todosLoading} deleteTodo={deleteTodo}/></div>
         </div>
     );
 }
