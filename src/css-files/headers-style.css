@@ -1,0 +1,30 @@
+.wrap-header{
+    width: 100%;
+    height: auto;
+    background: black;
+     color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 35px;
+}
+.users-info li{
+    list-style: none;
+}
+.flex{
+    display: flex;
+}
+.width25{
+    width: 25%;
+}
+.navigation a{
+    margin: 10px;
+    color: #696969;
+}
+.navigation a:hover{
+    color: white;
+}
+.select-search input{
+ background: #060630;
+    border: 1px solid #060630;
+    border-radius: 12px;
+}
