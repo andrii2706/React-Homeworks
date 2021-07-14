@@ -14,7 +14,9 @@
   "devDependencies": {
     "react-select-search": "^3.0.8",
     "react-router-dom": "^5.2.0",
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

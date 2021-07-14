@@ -1,22 +1,17 @@
 import './App.css';
-import './css-files/headers-style.css'
-import Header from "./header/Header";
-import MovieList from "./movie-lists/MovieList";
-import Pagination from "./pagination/Pagination";
-
-
+import { Switch, Route } from "react-router-dom";
 
 function App() {
     return (
         <div>
-            <Header/>
-            <MovieList/>
-            <Pagination
-                MovieForPage={MovieForPage}
-                totalMovies={movies.length}
-            />
+            <Switch>
+                <Route exact path="/"/>
+                <Route  path="/"/>
+            </Switch>
         </div>
     );
 }
 
 export default App;
+
+
