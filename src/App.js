@@ -1,14 +1,13 @@
 import './App.css';
-import { Switch, Route } from "react-router-dom";
+import Heros from "./components/Hero/Heros";
+import MovieState from "./Context/MovieContex";
 
 function App() {
     return (
-        <div>
-            <Switch>
-                <Route exact path="/"/>
-                <Route  path="/"/>
-            </Switch>
-        </div>
+        <MovieState>
+            <Heros/>
+        </MovieState>
+
     );
 }
 
