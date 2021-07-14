@@ -1,8 +1,18 @@
 import {css, jsx} from "@emotion/css"
+import {useContext} from "react";
+import {MovieContex} from "../../Context/MovieContex";
+
 export default function HeroNavLink({btnText}){
+const {setHiddenMenu, activeLink, setActiveLink}= useContext(MovieContex)
 return(
 <div>
-    <button css={styles}>{btnText}</button>
+    <button onClick={()=>{
+        setActiveLink(btnText);
+        setHiddenMenu(true);
+    }}
+        css={styles}
+    style={{color: activeLink === btnText ? "#f9a5ff":"#fff"}}
+    >{btnText}</button>
 </div>
 )}
   const styles = css`

@@ -15,7 +15,7 @@ return(
      <HeroNavMenu/>
  </div>
         <HeroNavSearch/>
-        <i onClick={()=>setHiddenMenu(!hiddenmenu)} id={'burgerMenu'} className="fas fa-bars"></i>
+        <i onClick={()=>setHiddenMenu(!hiddenmenu)} id={'burgerMenu'} className={hiddenmenu? "fas fa-bars":"fas fa-times"}></i>
     </Conteiner>
 
 </nav>
