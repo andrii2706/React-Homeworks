@@ -1,6 +1,6 @@
-import {css, jsx} from "@emotion/css";
+import {css, jsx} from "@emotion/react"
 
-const Loader = ()=> <div css={styles} className={'loader'}></div>
+const Loader = ()=> <div css={styles}  className={'loader'}></div>
 
 const styles = css`
 position: absolute;

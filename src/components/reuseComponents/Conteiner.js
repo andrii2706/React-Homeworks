@@ -1,7 +1,7 @@
-import {css, jsx} from "@emotion/css"
+import {css, jsx} from "@emotion/react"
 
 const Conteiner = ({children})=>(
-    <div css={styles} className={'container'}>
+    <div css={styles}  className={'container'}>
         {children}
     </div>
 )

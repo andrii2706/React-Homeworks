@@ -1,16 +1,13 @@
-import './App.css';
-import Heros from "./components/Hero/Heros";
-import MovieState from "./Context/MovieContex";
+import React from "react";
 
-function App() {
+import "./App.css";
+
+const App = () => {
     return (
-        <MovieState>
-            <Heros/>
-        </MovieState>
+       <div>
 
+       </div>
     );
-}
+};
 
 export default App;
-
-

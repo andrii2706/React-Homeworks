@@ -1,9 +1,9 @@
-import {css, jsx} from "@emotion/css"
+import { css, jsx } from "@emotion/react";
 import HeroNav from "./HeroNav";
-import Output from "../../Output/Output";
+import Output from "../Output/Output";
 export default function Heros(){
 return(
-<div css={styles} className={'hero'}>
+<div css={styles}  className={'hero'}>
     <HeroNav/>
     <Output/>
 </div>

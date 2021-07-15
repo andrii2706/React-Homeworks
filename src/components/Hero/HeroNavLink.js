@@ -1,6 +1,6 @@
-import {css, jsx} from "@emotion/css"
+import {css, jsx} from "@emotion/react"
 import {useContext} from "react";
-import {MovieContex} from "../../Context/MovieContex";
+import {MovieContex} from "../Context/MovieContex";
 
 export default function HeroNavLink({btnText}){
 const {setHiddenMenu, activeLink, setActiveLink}= useContext(MovieContex)

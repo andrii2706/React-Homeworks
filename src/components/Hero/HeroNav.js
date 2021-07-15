@@ -1,9 +1,9 @@
-import {css, jsx} from "@emotion/css"
+import {css, jsx} from "@emotion/react"
 import Conteiner from "../reuseComponents/Conteiner";
 import HeroNavMenu from "./HeroNavMenu";
 import HeroNavLogo from "./HeroNavLogo";
 import HeroNavSearch from "./HeroNavSearch";
-import {MovieContex} from "../../Context/MovieContex";
+import {MovieContex} from "../Context/MovieContex";
 import {useContext} from "react";
 export default function HeroNav(){
     const {hiddenmenu, setHiddenMenu} =useContext(MovieContex)

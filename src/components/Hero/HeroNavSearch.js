@@ -1,4 +1,4 @@
-import {css, jsx} from "@emotion/css"
+import {css, jsx} from "@emotion/react"
 
 export default function (){
 return(
