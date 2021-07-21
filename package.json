@@ -18,14 +18,15 @@
   "devDependencies": {
     "@emotion/core": "^11.0.0",
     "axios": "^0.21.1",
+    "bootstrap": "5.0.1",
     "react-bootstrap": "^1.6.1",
     "react-player": "^2.9.0",
     "react-rating-stars-component": "^2.2.0",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-select-search": "^3.0.8",
-    "redux": "^4.1.0",
-    "bootstrap": "5.0.1"
+    "reactstrap": "^8.9.0",
+    "redux": "^4.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
