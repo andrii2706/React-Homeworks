@@ -106,10 +106,10 @@ export class Pushing extends Component {
                     <td>{book.author}</td>
                     <td>{book.category}</td>
                     <td>{book.isbn}</td>
-                    <td>
-                        <Button color="success" size="sm" className="mr-2"
+                    <td className="flex">
+                        <Button color="success" size="sm" className="mr-2 font-size"
                                 onClick={this.editBook.bind(this, book.id, book.title, book.author, book.category, book.isbn)}>Edit</Button>
-                        <Button color="danger" size="sm" onClick={this.deleteBook.bind(this, book.id)}>Delete</Button>
+                        <Button color="danger" size="sm" className="font-size" onClick={this.deleteBook.bind(this, book.id)}>Delete</Button>
                     </td>
                 </tr>
             )
@@ -117,9 +117,9 @@ export class Pushing extends Component {
         return (
             <div className="App container">
 
-                <h1>Books App</h1>
+                <h1 className="center">Books App</h1>
 
-                <Button className="my-3" color="primary" onClick={this.toggleNewBookModal.bind(this)}>Add Book</Button>
+                <Button className="my-3 center" color="primary" onClick={this.toggleNewBookModal.bind(this)}>Add Book</Button>
 
                 <Modal isOpen={this.state.newBookModal} toggle={this.toggleNewBookModal.bind(this)}>
                     <ModalHeader toggle={this.toggleNewBookModal.bind(this)}>Add a new book</ModalHeader>
@@ -223,7 +223,6 @@ export class Pushing extends Component {
                         <th>Author</th>
                         <th>Category</th>
                         <th>ISBN</th>
-                        <th>Actions</th>
                     </tr>
                     </thead>
 

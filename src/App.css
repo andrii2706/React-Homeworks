@@ -68,3 +68,20 @@ tbody{
     width: 100%;
     margin: 10px;
 }
+@media screen and (min-width: 320px){
+    tr{
+        display: block;
+        font-size: 13px;
+    }
+    td{
+        font-size: 100%;
+    }
+    .wrapper{
+        margin: 15px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
